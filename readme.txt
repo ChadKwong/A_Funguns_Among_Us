@@ -1,0 +1,1 @@
+The dataset was obtained from https://www.kaggle.com/datasets/daniilonishchenko/mushrooms-images-classification-215

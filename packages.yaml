@@ -1,0 +1,16 @@
+spack:
+  config:
+    install_missing_compilers: true
+  concretizer:
+    unify: when_possible
+    targets:
+      host_compatible: false
+  definitions:
+    - compilers: [gcc@11.2.0]
+    - packages: [python,py-matplotlib, py-pandas, py-numpy+blas+lapack, py-pillow, py-tqdm, py-scikit-learn, py-tensorflow@2.11.0, py-memory-profiler, py-dask, py-dask-ml]
+    - targets: [target=zen3]
+  specs:
+  - matrix:
+    - [$%compilers]
+    - [$packages]
+    - [$targets]
